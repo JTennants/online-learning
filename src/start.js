@@ -9,9 +9,7 @@ class Start extends Component {
     constructor(props){
         super(props);
         this.state = {
-            message: "Are you sure? Go on - have some fun while you learn!",
-            yesoption: "Yes, take me to the article",
-            nooption: "No, play the game",
+            redirectFlag: false,
             isClicked: false,
         }
     }
@@ -31,22 +29,8 @@ class Start extends Component {
                             <div className="col-12">
                                 <section id="activityContent">
                                     <div className="contentBox">
-                                        <h1>{this.state.isClicked ? this.state.message : "What would you rather do?"}</h1>
+                                        <h1>{this.state.isClicked ? "Are you sure? Go on - have some fun while you learn!" : "What would you rather do?"}</h1>
                                         <div className="container-fluid">
-                                         {/*   <div className="row  text-center mb-4">
-                                                <div className="col-12">
-                                                    <div className="passage">
-                                                        <p><b>Tim:</b> So what happened last night then?</p>
-                                                        <p><b>Daisy:</b> Well we went to see an interesting piece of
-                                                            contemporary theatre, drank an enormous amount of free wine,
-                                                            ate our body-weight in Twiglets and you punched an artist in
-                                                            the face.</p>
-                                                        <p><b>Tim:</b> Sh*t, I'm not supposed to eat Twiglets.</p>
-                                                        <p><b>Daisy:</b> Why not?</p>
-                                                        <p><b>Tim:</b> They make me violent.</p>
-                                                    </div>
-                                                </div>
-                                            </div>*/}
                                             <div className="row text-center">
 
                                                 <div className="col-md-6">
@@ -57,7 +41,7 @@ class Start extends Component {
                                                                 <button className="button-audio mr-2"></button>
                                                             </div>
                                                             <div className="col full-width-button-container">
-                                                                <button className="button-lg responsive m-0" onClick={  () => this.setState({isClicked: !this.state.isClicked}) } > {this.state.isClicked ? <a href="https://www.learnupon.com/blog/elearning-glossary/" style={{color: 'white'}}> {this.state.yesoption} </a>  : "Click this link for a 14 page article on e-learning terminology?"}
+                                                                <button className="button-lg responsive m-0" onClick={()=> {if(this.state.isClicked){this.setState({redirectFlag: true})} else{this.setState({isClicked: !this.state.isClicked})}}   } > {this.state.isClicked ? "Yes, take me to the article."  : "Click this link for a 14 page article on e-learning terminology?"}
                                                                 </button>
                                                             </div>
                                                         </div>
@@ -73,7 +57,7 @@ class Start extends Component {
                                                                 <button className="button-audio mr-2"></button>
                                                             </div>
                                                             <div className="col full-width-button-container">
-                                                                <Link to="/matchingpairs"> <button className="button-lg responsive m-0"> {this.state.isClicked ? this.state.nooption : "Play a game?"}
+                                                                <Link to="/matchingpairs"> <button className="button-lg responsive m-0"> {this.state.isClicked ? "No, play the game" : "Play a game?"}
                                                                 </button> </Link>
                                                             </div>
                                                         </div>
@@ -84,7 +68,7 @@ class Start extends Component {
                                             </div>
                                         </div>
 
-
+                                        {this.state.redirectFlag ? <Route exact path="/" render={() => (window.location = "https://www.learnupon.com/blog/elearning-glossary/")} />: console.log("nothing")}
                                     </div>
                                 </section>
                             </div>

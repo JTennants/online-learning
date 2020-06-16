@@ -34,7 +34,7 @@ class Quote3 extends Component {
                                                 <div className="row no-gutters">
 
                                                     <div className="col">
-                                                        <p>One hour of fully interactive elearning takes c.700 hours to develop with a team of instructional designers, subject matter experts, graphic designers, animators, voice over artists, and developers -not including quality assurance by external bodies.</p>
+                                                        <p>One hour of fully interactive elearning can take between 100 and 700 hours to develop with a team of instructional designers, subject matter experts, graphic designers, animators, voice over artists, and developers -not including quality assurance by external bodies.</p>
                                                     </div>
                                                 </div>
                                             </div>

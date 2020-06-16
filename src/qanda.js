@@ -114,7 +114,7 @@ class QandA extends Component {
                 <div className="game-container memory-counting">
                     <span className="avoid-wrap">
 
-                        <h1>Which video conferencing tool had the most users?</h1>
+                        <h1 style={{color: "white"}}>Which video conferencing tool has the most users?</h1>
 
             <div className="revision-container-phonemes">
                 <div className="row no-gutters">
@@ -157,12 +157,25 @@ class QandA extends Component {
                 </div>
                 <br/>
 
-                <button type="button" className={this.state.allCorrect ? "navbtn next": "navbtn next navbtn-disabled"}
-                        onClick={()=>{this.setState({redirectFlag: true});}}>
-                    &#62;
-                </button>
+                <div className="row no-gutters act-end-nav justify-content-end">
 
-                {this.state.redirectFlag ? <Redirect to="/info"/> : console.log("nothing")}
+
+                    <div className="col-12 col-sm-auto order-sm-3 ">
+                        {this.state.allCorrect ?
+                            <button className="act-next bg-success " aria-pressed="true"><span
+                                className="direction-icon" onClick={()=>this.setState({redirectFlag: true})}/>
+                            </button>:
+                            <button disabled className="act-next bg-secondary " aria-pressed="true"><span
+                                className="direction-icon"/>
+                            </button>}
+                    </div>
+
+                    {this.state.redirectFlag ? <Redirect to="/info"/> : console.log("nothing")}
+
+
+                </div>
+
+
 
             </div>
         );

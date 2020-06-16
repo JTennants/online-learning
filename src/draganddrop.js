@@ -11,12 +11,12 @@ class DragandDrop extends Component {
     constructor(props) {
         super(props);
         this.droppablesExpected = [
-            ["I", "N", "T", "E", "R", "A", "C", "T", "I", "O", "N"]
+            ["I", "N", "T", "E", "R", "A", "C", "T"]
         ];
-        this.labelsForDraggables = ["N", "I", "C", "E", "T", "O", "T", "R", "A", "I", "N"];
+        this.labelsForDraggables = ["N", "I", "C", "E", "T", "T", "R", "A"];
         this.labelsForDraggables = this.labelsForDraggables.sort(function () { return Math.random() - Math.random() });
         this.spanData = [
-            ["Online learning is a learner's "]
+            ["Online learning should not be a passive experience. Learners need to "]
         ];
        // this.props.hidePrev();
         this.state = {
@@ -36,7 +36,7 @@ class DragandDrop extends Component {
 
 
             this.splitIndex = 1;
-            this.lengthOfDroppable = 11;
+            this.lengthOfDroppable = 8;
 
 
 
@@ -294,7 +294,7 @@ class DragandDrop extends Component {
                                 }
                             </div>
                         </div>
-                        <p>with content and/or tutors</p>
+                        <p>with the screen as often as possible.</p>
                         <div className="row no-gutters">
                             <div className="col-12">
                                 <div className="drag-source-box">{draggables}</div>

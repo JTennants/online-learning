@@ -36,20 +36,32 @@ class Image2 extends Component {
 
                                 <br/>
 
-                                <button type="button" className="navbtn next"
-                                        onClick={()=>{this.setState({location: '/img',redirectFlag: true});}}>
-                                    &#60;
-                                </button>
+                                <div className="row no-gutters act-end-nav justify-content-end">
 
-                                <button type="button" className="navbtn next"
-                                        onClick={()=>{this.setState({location: '/page',redirectFlag: true});}}>
-                                    &#62;
-                                </button>
+
+                                    <div className="col-12 col-sm-auto order-sm-3 ">
+
+                                        <button className="act-prev bg-success " aria-pressed="true"><span
+                                            className="direction-icon" onClick={()=>this.setState({location: '/img',redirectFlag: true})}/>
+                                        </button>
+
+                                    </div>
+
+                                    <div className="col-12 col-sm-auto order-sm-3 ">
+
+                                        <button className="act-next bg-success " aria-pressed="true"><span
+                                            className="direction-icon" onClick={()=>this.setState({location: '/page',redirectFlag: true})}/>
+                                        </button>
+
+                                    </div>
+
+                                    {this.state.redirectFlag ? <Redirect to={this.state.location}/> : console.log("nothing")}
+
+                                </div>
                             </div>
                         </div>
 
                     </div>
-                    {this.state.redirectFlag ? <Redirect to={this.state.location}/> : console.log("nothing")}
                 </div>
             </section>
 

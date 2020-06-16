@@ -49,15 +49,30 @@ class Quote2 extends Component {
                                 </div>
                                 <br/>
 
-                                <button type="button" className="navbtn next"
-                                        onClick={()=>{this.setState({location: '/info',redirectFlag: true});}}>
-                                    &#60;
-                                </button>
 
-                                <button type="button" className="navbtn next"
-                                        onClick={()=>{this.setState({location: '/draganddrop',redirectFlag: true});}}>
-                                    &#62;
-                                </button>
+
+                                <div className="row no-gutters act-end-nav justify-content-end">
+
+
+                                    <div className="col-12 col-sm-auto order-sm-3 ">
+
+                                        <button className="act-prev bg-success " aria-pressed="true"><span
+                                            className="direction-icon" onClick={()=>this.setState({location: '/info',redirectFlag: true})}/>
+                                        </button>
+
+                                    </div>
+
+                                    <div className="col-12 col-sm-auto order-sm-3 ">
+
+                                        <button className="act-next bg-success " aria-pressed="true"><span
+                                            className="direction-icon" onClick={()=>this.setState({location: '/draganddrop',redirectFlag: true})}/>
+                                        </button>
+
+                                    </div>
+
+                                    {this.state.redirectFlag ? <Redirect to={this.state.location}/> : console.log("nothing")}
+
+                                </div>
                             </div>
                         </div>
 

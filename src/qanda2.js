@@ -26,7 +26,7 @@ class QandA extends Component {
             },
             {
                 "image": "https://cdn.pixabay.com/photo/2015/02/02/11/09/office-620822_960_720.jpg",
-                "text": "3. Learners don't passivley consume content",
+                "text": "3. Learners don't passively consume content",
 
             },
             {
@@ -51,28 +51,33 @@ class QandA extends Component {
             },
             {
                 "image": "https://cdn.pixabay.com/photo/2015/07/02/10/40/writing-828911_960_720.jpg",
-                "text": "1. Tutors are empowered to offer evidence-based personal support",
+                "text": "1. Tutors can see what their students are doing and can offer evidence-based support.",
                 "heading": "What is the tutors role?",
 
             },
             {
                 "image": "https://cdn.pixabay.com/photo/2015/02/02/11/08/office-620817_960_720.jpg",
-                "text": "2. Real-time feedback on your students from your own Reporting Dashboard",
+                "text": "2. Tutors can access real time feedback on their students from their own Reporting Dashboard.",
+
+            },
+            {
+                "image": "https://cdn.pixabay.com/photo/2015/02/02/11/08/office-620817_960_720.jpg",
+                "text": "3. Tutors can choose when and where to teach.",
 
             },
             {
                 "image": "https://cdn.pixabay.com/photo/2017/08/25/10/52/faces-2679740_960_720.jpg",
-                "text": "3. Encourage collaborative learning through Forums",
+                "text": "4. Encourage collaborative learning through Forums",
 
             },
             {
                 "image": "https://cdn.pixabay.com/photo/2015/04/20/13/41/person-731479_960_720.jpg",
-                "text": "4. Check the progress of our groups and individual students",
+                "text": "5. Check the progress of our groups and individual students",
 
             },
             {
                 "image": "https://cdn.pixabay.com/photo/2020/05/12/13/04/video-conference-5162927_960_720.jpg",
-                "text": "5. Collaborate with colleagues across the collage and share best practice",
+                "text": "6. Collaborate with colleagues across the college and share best practice",
 
             },
             {
@@ -83,73 +88,58 @@ class QandA extends Component {
             },
             {
                 "image": "https://cdn.pixabay.com/photo/2017/02/07/13/36/ipad-2045890_960_720.jpg",
-                "text": "2. They can plan their learning around their lives",
-
-            },
-            {
-                "image": "https://cdn.pixabay.com/photo/2015/03/26/09/40/keyboard-690066_960_720.jpg",
-                "text": "3. They can interact with teachers and other students online",
+                "text": "2. Everyone can plan their learning around their lives",
 
             },
             {
                 "image": "https://cdn.pixabay.com/photo/2016/06/28/05/10/laptop-1483974_960_720.jpg",
-                "text": "4. They can choose their own learning style from a range of multimedia options",
+                "text": "3. They can choose their own learning style from a range of multimedia options",
 
             },
             {
                 "image": "https://cdn.pixabay.com/photo/2016/04/20/08/21/entrepreneur-1340649_960_720.jpg",
-                "text": "5. There is a clear, structured pathway to progress",
+                "text": "4. There is a clear, structured pathway to progress",
 
             },
             {
                 "image": "https://cdn.pixabay.com/photo/2015/06/24/15/45/ipad-820272_960_720.jpg",
-                "text": "6. They can acquire digital skills for the world of work",
+                "text": "5. They can acquire digital skills for the world of work",
 
             },
             {
                 "image": "https://cdn.pixabay.com/photo/2016/08/23/12/37/files-1614223_960_720.jpg",
-                "text": "1. Less paper and photocopying",
-                "heading": "How do collages benefit?",
-
-            },
-            {
-                "image": "https://cdn.pixabay.com/photo/2016/03/09/09/14/books-1245690_960_720.jpg",
-                "text": "2. No need for course books",
-
-            },
-            {
-                "image": "https://cdn.pixabay.com/photo/2018/03/26/06/20/desktop-3261767_960_720.jpg",
-                "text": "3. No need for stationary",
+                "text": "1. Less need for coursebooks and stationery.",
+                "heading": "How do colleges benefit?",
 
             },
             {
                 "image": "https://cdn.pixabay.com/photo/2016/02/17/14/24/work-desk-1205159_960_720.jpg",
-                "text": "4. Staff can work from home",
+                "text": "2. Staff can work from home",
 
             },
             {
                 "image": "https://cdn.pixabay.com/photo/2016/03/05/22/34/abstract-1239321_960_720.jpg",
-                "text": "5. Digital tutor hours are more flexible; no travelling time or classrooms",
+                "text": "3. Digital tutor hours are more flexible; no travelling time or classrooms.",
 
             },
             {
                 "image": "https://cdn.pixabay.com/photo/2017/12/12/09/09/business-3014200_960_720.jpg",
-                "text": "6. Ongoing return on investment from product development",
+                "text": "4. Ongoing return on investment from product development.",
 
             },
             {
                 "image": "https://cdn.pixabay.com/photo/2014/11/13/23/34/london-530055_960_720.jpg",
-                "text": "7. Commercial opportunities in the UK and overseas",
+                "text": "5. Collaborate with Klik2Learn to develop new online courses with UK and overseas learners.",
 
             },
             {
                 "image": "https://cdn.pixabay.com/photo/2017/12/28/04/15/hand-3044387_960_720.jpg",
-                "text": "8. Brand reputation as a digital leader and innovator",
+                "text": "6. Boost your reputation as a digital leader and innovator.",
 
             },
             {
                 "image": "https://media.istockphoto.com/photos/carbon-dioxide-emissions-control-and-pollution-concept-picture-id1168182427",
-                "text": "9. The Green agenda",
+                "text": "7. The Green agenda",
                 "list": listItems.map((d)=><li key={d.fact}>{d.fact}</li>),
                 "source": "Stockholm Environmental Institute",
                },
@@ -191,12 +181,18 @@ class QandA extends Component {
     };
 
     counterCheck=()=>{
-        if (this.state.counter == 27)
+        if (this.state.counter == 25)
         {
-            return('navbtn next navbtn-disabled')
-            ;
+            return(<button className="act-next bg-success " aria-pressed="true"><span
+                className="direction-icon" onClick={()=>this.updateCounter("forward")}/>
+            </button>)
+
+                ;
         }
-        else{return('navbtn next');}
+       return(<button disabled className="act-next bg-success " aria-pressed="true"><span
+            className="direction-icon" onClick={()=>this.updateCounter("forward")}/>
+        </button>)
+
     };
 
 
@@ -228,15 +224,27 @@ class QandA extends Component {
 
                                 <br/>
 
-                                <button type="button" className="navbtn next"
-                                        onClick={()=>this.updateCounter("back")}>
-                                    &#60;
-                                </button>
 
-                                <button type="button" className={this.counterCheck()}
-                                onClick={()=>this.updateCounter("forward")}>
-                                    &#62;
-                                </button>
+                                <div className="row no-gutters act-end-nav justify-content-end">
+
+
+                                    <div className="col-12 col-sm-auto order-sm-3 ">
+                                            <button className="act-prev bg-success " aria-pressed="true"><span
+                                                className="direction-icon" onClick={()=>this.updateCounter("back")}/>
+                                            </button>
+                                    </div>
+
+
+
+                                    <div className="col-12 col-sm-auto order-sm-3 ">
+                                        {this.counterCheck()}
+                                    </div>
+
+
+
+
+                                </div>
+
 
                             </div>
                         </div>

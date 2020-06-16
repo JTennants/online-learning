@@ -137,7 +137,7 @@ class MatchingPairs2 extends Component {
 
                     </span>
                 </div>
-                {this.state.redirectFlag ? <Redirect to="/qanda"/> : console.log("nothing")}
+                {this.state.redirectFlag ? <Redirect to="/matchingpairs3"/> : console.log("nothing")}
             </div>
         );
     }

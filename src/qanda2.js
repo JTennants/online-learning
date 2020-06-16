@@ -6,7 +6,7 @@ import './App.css';
 
 
 
-class QandA extends Component {
+class QandA2 extends Component {
     constructor(props){
         super(props);
 
@@ -14,11 +14,15 @@ class QandA extends Component {
             {"fact":"The average full time student generates c.180 pounds of CO2"},{"fact":"The average online student generates c.4 pounds of CO2"}]
 
         this.items =  [{
-            "image": "https://cdn.pixabay.com/photo/2015/05/12/09/13/freelancer-763730_960_720.jpg",
-            "text": "1. Materials all ready to got before a course starts",
-           "heading": "So what do you get when it's finished?",
+            "image": "https://www.klik2learn.com/img/header-logo.png",
+           "heading": "What does The Digital Learning Hub offer apart from game-based learning and frequent interactions?'",
 
         },
+            {
+                "image": "https://cdn.pixabay.com/photo/2015/05/12/09/13/freelancer-763730_960_720.jpg",
+                "text": "1. Materials all ready to got before a course starts",
+
+            },
             {
                 "image": "https://cdn.pixabay.com/photo/2020/04/25/19/59/call-5092454_960_720.jpg",
                 "text": "2. No disruption through staff absence, pandemics, etc",
@@ -181,17 +185,19 @@ class QandA extends Component {
     };
 
     counterCheck=()=>{
-        if (this.state.counter == 25)
+        console.log(this.state.counter);
+        if (this.state.counter === 26)
         {
+            return( <button disabled className="act-next bg-secondary " aria-pressed="true"><span
+                className="direction-icon"/>
+            </button>)
+
+        }
+        else {
             return(<button className="act-next bg-success " aria-pressed="true"><span
                 className="direction-icon" onClick={()=>this.updateCounter("forward")}/>
             </button>)
-
-                ;
         }
-       return(<button disabled className="act-next bg-success " aria-pressed="true"><span
-            className="direction-icon" onClick={()=>this.updateCounter("forward")}/>
-        </button>)
 
     };
 
@@ -260,4 +266,4 @@ class QandA extends Component {
 
 
 
-export default QandA;
+export default QandA2;

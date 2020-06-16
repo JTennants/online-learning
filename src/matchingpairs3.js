@@ -4,14 +4,14 @@ import { withCookies, Cookies } from 'react-cookie';
 import './App.css';
 
 
-class MatchingPairs2 extends Component {
+class MatchingPairs3 extends Component {
     constructor(props) {
         super(props);
         var matchPhrases = [
-            {"label":"Blended Learning", "val":"3"}, {"label":"Combine online learning with classroom learning", "val":"3"},
-            {"label":"Learning Platform", "val":"4"}, {"label":"A set of tools to manage online learners and learning", "val":"4"},
-            {"label":"Synchornous Learning", "val":"1"}, {"label":"Learning online in real time with a tutor/other students", "val":"1"}
-           ];
+            {"label":"Virtual Learning Environment", "val":"2"}, {"label":"Supporting learners through forums etc. based on a constructivist approach", "val":"2"},
+            {"label":"Asynchronous Learning", "val":"3"}, {"label":"Learn online without real time interaction with a tutor", "val":"3"},
+            {"label":"Learning Management System", "val":"4"}, {"label":"Administering tracking and delivering online learning- based on a behaviourist approach", "val":"4"}
+        ];
         var matchesReq = 3;
         var justLabels = [];
 
@@ -172,4 +172,4 @@ function MatchElem(props) {
 
 
 
-export default MatchingPairs2;
+export default MatchingPairs3;

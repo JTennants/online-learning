@@ -5,6 +5,7 @@ import './App.css';
 
 import MatchingPairs from "./matchingpairs";
 import MatchingPairs2 from "./matchingpairs2";
+import MatchingPairs3 from "./matchingpairs3";
 import Start from "./start";
 import QandA from "./qanda";
 import QandA2 from "./qanda2";
@@ -27,6 +28,7 @@ class App extends Component {
                 <Route path="/" exact component={Start} />
                 <Route path={"/matchingpairs"} exact component={MatchingPairs} />
                 <Route path={"/matchingpairs2"} exact component={MatchingPairs2} />
+                <Route path={"/matchingpairs3"} exact component={MatchingPairs3} />
                 <Route path={"/qanda"} exact component={QandA} />
                 <Route path={"/fin"} exact component={QandA2} />
                 <Route path={"/info"} exact component={Quote} />

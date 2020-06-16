@@ -10,10 +10,9 @@ class MatchingPairs extends Component {
         var matchPhrases = [
             {"label":"Flipped Classroom", "val":"1"}, {"label":"Self-study content online. Discuss later with tutor", "val":"1"},
             {"label":"Distance Learning", "val":"2"}, {"label":"Learn online without any tutor support ", "val":"2"},
-            {"label":"Blended Learning", "val":"3"}, {"label":"Combine online learning with classroom learning", "val":"3"},
-            {"label":"Learning Platform", "val":"4"}, {"label":"A set of tools to manage online learners and learning", "val":"4"}
+
         ];
-        var matchesReq = 4;
+        var matchesReq = 2;
         var justLabels = [];
 
         this.items = matchPhrases.sort(function () { return Math.random() - Math.random() });
